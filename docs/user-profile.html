@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+
+        <style>
+        /* Add custom styles here */
+        .back-button {
+            position: absolute;
+            top: 2px;
+            left: 10px;
+            background: none;
+    
+            border: none;
+            cursor: pointer;
+            font-size: 40px;
+        }
+        .container{
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <button class="back-button" onclick="goBack()">&larr;</button>
+    <div class="container">
+        <h1>User Profile</h1>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Username: <span id="username"></span></h5>
+                <p class="card-text">Email: <span id="email"></span></p>
+                <button id="logoutBtn" class="btn btn-danger">Logout</button>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script src="./js/user-profile.js"></script>
+</body>
+</html>
