@@ -101,6 +101,9 @@ document.addEventListener("DOMContentLoaded", function() {
             if (response.ok) {
                 // Handle successful response
                 console.log('Invoice generated successfully');
+                invoiceForm.reset();
+                invoiceDetails.length = 0;  
+                invoiceDetailsContainer.innerHTML = '';
 
                  const contentType = response.headers.get('content-type');
             if (contentType && contentType.includes('application/json')) {

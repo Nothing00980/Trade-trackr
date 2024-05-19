@@ -30,7 +30,7 @@ document.getElementById('signup-form').addEventListener('submit', function(event
         // Handle successful response
         if (data.success) {
             alert('Signup successful!');
-            window.location.href = './../login.html' // Display success alert
+            window.location.href = '../login.html' // Display success alert
         } else {
             alert(data.error); // Display error alert
         }

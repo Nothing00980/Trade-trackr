@@ -24,20 +24,28 @@
 
   
   <style>
-    .invoice-detail {
+    .bill-detail {
       display: flex;
       flex-wrap: nowrap;
       margin-bottom: 20px;
     }
 
-    .invoice-detail .form-group {
+    .bill-detail .form-group {
       flex: 1;
       margin-right: 10px;
     }
 
-    .invoice-detail .form-group:last-child {
+    .bill-detail .form-group:last-child {
       margin-right: 0;
     }
+
+    
+
+    .search-section,
+.bill-list-section {
+    display: none;
+}
+
   </style>
   
   
@@ -71,10 +79,10 @@
 						<a class="nav-link link text-black display-4 " href="./index.html">Home</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link link text-black display-4" id="active" href="./invoice.html">Invoices</a>
+						<a class="nav-link link text-black display-4"  href="./invoice.html">Invoices</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link link text-black display-4" href="./importbill.html" aria-expanded="false">Import</a>
+						<a class="nav-link link text-black display-4" id="active" href="./importbill.html" aria-expanded="false">Import</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link link text-black display-4" href="https://mobiri.se">Export</a>
@@ -98,45 +106,67 @@
 
 
 
-
 <section data-bs-version="5.1" class="article9 cid-ubU2slTIxl" id="generic-text-9-ubU2slTIxl">
-  
-
-  
-  
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="card col-md-12 col-lg-10">
-        <div class="card-wrapper">
-          <div class="card-content-text">
-            <h3 class="card-title mbr-fonts-style mbr-white mt-3 mb-4 display-2">
-            <strong>Generate Invoice</strong>
-          </h3>
-          <div class="row card-box align-left">
-            <div class="item features-without-image col-12">
-              <div class="item-wrapper">
-                
-                <p class="mbr-text mbr-fonts-style display-7">Welcome to Trade Trackr's Invoice Generator! No sign-in needed – just fill out the form, generate your invoice, and download it as a PDF.<br>
-                    <br>
-                   <strong>Easy Steps to consider:</strong> <br>
-                   <br>
-                    1. Fill Out the Form: Enter your business and recipient details.<br>
-                    2. Add Invoice Details: Include item descriptions, quantities, and rates.<br>
-                    3. Generate Invoice: Click "Generate" to create your invoice instantly.<br>
-                    4. Download: Save your invoice as a PDF for easy sharing and record-keeping.</p>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="card col-md-12 col-lg-10">
+          <div class="card-wrapper">
+            <div class="card-content-text">
+              <h3 class="card-title mbr-fonts-style mbr-white mt-3 mb-4 display-2">
+                <strong>Upload Import Bill</strong>
+              </h3>
+              <div class="row card-box align-left">
+                <p class="mbr-text mbr-fonts-style display-7">
+                  Welcome to Trade Trackr's Import Bill Upload section! Here, logged-in users can easily upload their import bills, whether in PNG, JPG, JPEG, or PDF format. By uploading your import bills, you can gain valuable insights into your business expenditure, helping you make informed decisions to boost your business's growth and efficiency.
+                </p>
+                <p class="mbr-text mbr-fonts-style display-7">
+                  <strong>Follow these simple steps:</strong>
+                  <br>
+                  1. Click on the "Choose File" button to select the import bill file from your device.
+                  <br>
+                  2. Once selected, click the "Upload" button to upload the file to Trade Trackr.
+                  <br>
+                  3. After successful upload, your import bill will be added to the list below for easy access and analysis.
+                  <br>
+                  4. Unfortunately this feature is being devloped so you can manualy add the Bill
+                  <br>
+                  5. Gain insights from your import bills to optimize your business operations and drive growth!
+                </p>
               </div>
             </div>
-
           </div>
-          </div>
-       
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="form-section">
+  <!-- Form section -->
+  <!-- <section class="form-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="card col-md-12 col-lg-10">
+          <div class="card-wrapper">
+            <div class="card-content-text">
+              <h3 class="card-title mbr-fonts-style mbr-white mt-3 mb-4 display-2">
+                <strong>Upload Import Bill</strong>
+              </h3>
+              <div class="row card-box align-left">
+                <form id="import-bill-form" enctype="multipart/form-data">
+                  <div class="form-group">
+                    <label for="import-bill-file">Upload Import Bill (PNG/JPG/JPEG/PDF)</label>
+                    <input type="file" class="form-control" id="import-bill-file" name="import-bill-file" accept=".png, .jpg, .jpeg, .pdf">
+                  </div>
+                  <button type="submit" class="btn btn-primary">Upload</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <section class="form-section">
     <!-- Form section -->
     <div class="container">
       <div class="row justify-content-center">
@@ -144,48 +174,29 @@
           <div class="card-wrapper">
             <div class="card-content-text">
               <h3 class="card-title mbr-fonts-style mbr-white mt-3 mb-4 display-2">
-                <strong>Generate Invoice</strong>
+                <strong>Save Import Bills here </strong>
               </h3>
               <div class="row card-box align-left">
                 <!-- Invoice Form -->
-                <form id="invoice-form">
+                <form id="importbill-form">
                   <div class="form-group">
-                    <label for="wsaddress">Your Business Address</label>
-                    <input type="text" class="form-control" id="wsaddress" name="wsaddress" placeholder="Enter your business address">
+                    <label for="vendorname">Vendor's Name </label>
+                    <input type="text" class="form-control" id="vendorname" name="vendorname" placeholder="Enter Vendor's Name">
                   </div>
                   <div class="form-group">
-                    <label for="wsgsstin">Your GSTIN</label>
-                    <input type="text" class="form-control" id="wsgsstin" name="wsgsstin" placeholder="Enter your GSTIN">
+                    <label for="invoiceDate">Enter InvoiceDate format (yyyy-mm-dd)</label>
+                    <input type="date" class="form-control" id="invoiceDate" name="invoiceDate" placeholder="Enter invoiceDate">
                   </div>
-                  <div class="form-group">
-                    <label for="wspanno">Your PAN Number</label>
-                    <input type="text" class="form-control" id="wspanno" name="wspanno" placeholder="Enter your PAN number">
-                  </div>
-                  <div class="form-group">
-                    <label for="rname">Recipient Name</label>
-                    <input type="text" class="form-control" id="rname" name="rname" placeholder="Enter Recipient Name ">
-                  </div>
-                  <div class="form-group">
-                    <label for="rbname">Recipient Business Name</label>
-                    <input type="text" class="form-control" id="rbname" name="rbname" placeholder="Enter Recipient Business Name ">
-                  </div>
-                  <div class="form-group">
-                    <label for="raddress">Recipient Address</label>
-                    <input type="text" class="form-control" id="raddress" name="raddress" placeholder="Enter Recipient Address ">
-                  </div>
-                  <div class="form-group">
-                    <label for="rgstin">Recipient GSTIN</label>
-                    <input type="text" class="form-control" id="rgstin" name="rgstin" placeholder="Enter Recipient GSTIN ">
-                  </div>
+                  
 
 
                   <!-- Add more fields as needed -->
-                  <div id="invoice-details-container">
+                  <div id="bill-details-container">
                     <!-- Invoice details will be dynamically added here -->
                   </div>
-                  <button type="button" id="add-invoice-detail" class="btn btn-primary">Add Invoice Detail</button>
+                  <button type="button" id="add-bill-detail" class="btn btn-primary">Add Item Details</button>
 
-                  <button type="submit" class="btn btn-primary">Generate Invoice</button>
+                  <button type="submit" class="btn btn-primary">Save Bill</button>
                 </form>
               </div>
             </div>
@@ -194,6 +205,56 @@
       </div>
     </div>
   </section>
+
+
+<!-- "View Insights" button -->
+<section class="insights-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-12 col-lg-10">
+        <br>
+            <h4>View Insights here :</h4>
+<br>
+              <button id="view-insights-btn" class="btn btn-primary">View Insights</button>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- Search form section -->
+<section class="search-section" style="display: none;">
+  <div class="container">
+      <div class="row justify-content-center">
+          <!-- Your search form HTML goes here -->
+          <form id="search-form" class="row g-3">
+            <div class="form-group col-auto">
+                <input type="text" class="form-control" name="vendorname" id="vendorname" placeholder="Vendor Name">
+            </div>
+            <div class="form-group col-auto">
+                <input type="date" class="form-control" name="startDate" id="startDate" placeholder="Start Date">
+            </div>
+            <div class="form-group col-auto">
+                <input type="date" class="form-control" name="endDate" id="endDate" placeholder="End Date">
+            </div>
+            <div class="col-auto">
+            <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+        </form>
+      </div>
+  </div>
+</section>
+
+<!-- Import bill list section -->
+<section class="bill-list-section" style="display: none;">
+  <div class="container">
+      <div class="row justify-content-center">
+        <div id="bill-list-container" class="container">
+
+        </div>
+          <!-- Your import bill list HTML goes here -->
+      </div>
+  </div>
+</section>
 
 
 
@@ -261,7 +322,7 @@
     </div>
 </section>
 
-<script src="./js/invoice-detail.js"> </script>
+<script src="./js/importbill.js"> </script>
 <script src="./js/index.js"></script>
 
   <script src="assets/web/assets/jquery/jquery.min.js"></script>
