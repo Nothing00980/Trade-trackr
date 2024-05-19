@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function() {
             } else if(response.status === 401){
                 alert("Unauthorized personal please signin/login first ");
 
-                window.location.href = '../signin.html';
+                window.location.href = '/Trade-trackr/signin.html';
             }
             else {
                 // Handle error response
