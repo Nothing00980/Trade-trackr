@@ -34,7 +34,7 @@ document.getElementById('login-form').addEventListener('submit', function(event)
             localStorage.setItem('username', data.userDetails.username);
             localStorage.setItem('email', data.userDetails.email);
             // Redirect user to dashboard or home page
-            window.location.href = '../user-profile.html'; // Redirect to dashboard page
+            window.location.href = '/Trade-trackr/user-profile.html'; // Redirect to dashboard page
         } else {
             alert(data.message); // Display error alert
         }
