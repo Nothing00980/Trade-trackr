@@ -51,6 +51,7 @@ Open client/index.html in your web browser.
 
 - Fill out the form to create a new invoice.
 - The invoice will be generated and can be downloaded as a PDF.
+ 
 3.Import Bill Functionality:
 
 - After logging in, go to the import bill section.
