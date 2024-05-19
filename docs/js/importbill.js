@@ -110,6 +110,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 window.location.href = '/Trade-trackr/signin.html';
             }
+                else if(response.status === 403){
+                alert("Unauthorized personal please signin/login first ");
+
+                window.location.href = '/Trade-trackr/signin.html';
+            }
             else {
                 // Handle error response
                 alert('bill not saved');
