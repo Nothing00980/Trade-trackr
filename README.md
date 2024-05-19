@@ -13,6 +13,19 @@ A system to manage invoices, including searching, creating, and generating PDF i
 ## Screensnaps -- 
 
 
+
+
+https://github.com/Nothing00980/Trade-trackr/assets/100027640/b6ffed87-5e15-4697-80f6-3d4bc3869931
+
+
+https://github.com/Nothing00980/Trade-trackr/assets/100027640/f8a2232d-72b2-4e2a-b1f6-286c99bf1fd8
+
+
+
+https://github.com/Nothing00980/Trade-trackr/assets/100027640/72e2070c-08e1-4b73-ae7f-9c37e309bdf7
+
+
+
 ## Prerequisites
 
 - Node.js
