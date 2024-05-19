@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (isLoggedIn) {
         // If user is logged in, display user profile icon
-        navbarButtons.innerHTML = '<a class="btn btn-primary display-4" href="./../user-profile.html">User Profile</a>';
+        navbarButtons.innerHTML = '<a class="btn btn-primary display-4" href="../user-profile.html">User Profile</a>';
     } else {
         // If user is not logged in, display the Get Started button
-        navbarButtons.innerHTML = '<a class="btn btn-primary display-4" href="./../signin.html">Get Started</a>';
+        navbarButtons.innerHTML = '<a class="btn btn-primary display-4" href="../signin.html">Get Started</a>';
     }
 });
