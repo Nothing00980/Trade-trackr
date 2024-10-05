@@ -1,4 +1,5 @@
-const backendURL = 'http://localhost:80';
+const backendURL = 'https://user-data-management-backend.vercel.app';
+
 
 document.getElementById('signup-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form submission
