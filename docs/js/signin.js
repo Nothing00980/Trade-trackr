@@ -16,6 +16,7 @@ document.getElementById('signup-form').addEventListener('submit', function(event
     // Make POST request to backend server
     fetch(`${backendURL}/auth/user/signup`, {
         method: 'POST',
+        mode: 'no-cors',
         headers: {
             'Content-Type': 'application/json'
         },
