@@ -12,10 +12,10 @@ document.addEventListener('DOMContentLoaded', function() {
         // Clear all localStorage items
         localStorage.clear();
         // Redirect user to the sign-in page
-        window.location.href = '/Trade-trackr/index.html';
+        window.location.href = '/index.html';
     });
 });
 
 function goBack(){
-    window.location.href = "/Trade-trackr/index.html";
+    window.location.href = "/index.html";
 }
